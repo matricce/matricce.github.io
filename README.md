@@ -1,3 +1,3 @@
 # Imersão CSS
 
-link: https://matricce.github.io/imersaocss/
+link: https://matricce.github.io
