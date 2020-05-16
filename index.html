@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel='stylesheet' href="css/glitch.css">
+	<link rel='stylesheet' href="css/styles.css">
+	<link rel='stylesheet' href="css/button.css">
+</head>
+
+<body>
+  <audio id="myMusic" style="display:none" controls preload="none">
+  <source src="sound/Cyberpunk.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+  <script>
+    var music = document.getElementById("myMusic");
+    var music_state = 1;
+  function musicControl(){
+    music_state = !music_state;
+    if(!music_state){
+      document.getElementById("btn-music").innerHTML = "volume_up";
+      music.play();
+    }
+    else {
+      document.getElementById("btn-music").innerHTML = "volume_off";
+      music.pause();
+    }
+  }
+  </script>
+	<div class="bg">
+		<div class="bg-image"></div>
+	</div>
+  <button href="#" onclick="musicControl()" id="btn-music" class="btn-music material-icons">volume_off</button>
+	<header>
+		<nav class="menu">
+			<button href="#Interesses" class="btn">
+      <span class="btn__content">Interesses_</span>
+      <span class="btn__glitch"></span>
+      <span class="btn__label">r21-2020</span>
+    </button>
+    <button  href="#Projetos" class="btn">
+      <span class="btn__content">Projetos_</span>
+      <span class="btn__glitch"></span>
+      <span class="btn__label">r22-2020</span>
+    </button>
+    <button  href="#Contato" class="btn">
+      <span class="btn__content">Contato_</span>
+      <span class="btn__glitch"></span>
+      <span class="btn__label">r23-2020</span>
+    </button>
+    </nav>
+    <div class="myinfo">
+      <span class="site-title glitch" data-text="MATT">MATT</span>
+      <span class="site-subtitle glitch" data-text="jr. frontend dev">jr. frontend dev</span>
+    </div>
+  </header>
+
+
+  <section id="Interesses" style="margin-top:500px;display:flex;position:relative;color:white;font-size:20px;">Interesses</section>
+  <section id="Projetos" style="margin-top:500px;display:flex;position:relative;color:white;font-size:20px;">Projetos</section>
+  <section id="Contato" style="margin-top:500px;display:flex;position:relative;color:white;font-size:20px;">Contato</section>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  width: 100%;
+  height: auto;
+  min-width: 300px;
+}
+.bg {
+  filter:blur(1px);
+  -webkit-filter: blur(2px);
+  position: fixed; 
+  height: 100%;
+  width: 100%;
+}
+.bg-image {
+  background-image: url(../img/background.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+header {
+  display: flex; 
+  height: auto;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* align-items: self-between; */
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  width: 100%;
+  height: auto;
+  /* align-self: flex-start; */
+  background-color: black;/*DEBUG*/
+  /* align-content:space-between; */
+}
+.myinfo{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 7em;
+  width: 310px;
+  min-width: 310px;
+  background-color: red;/*DEBUG*/
+}
+.site-title,
+.site-subtitle{
+  text-align: center;
+  margin:0;
+}
+ .site-title {
+   /* font-family: Arial; */
+   font-family: 'Allerta Stencil', sans-serif;
+   /* font-family: Tomorrow, sans-serif; */
+   font-size: 7em;
+   font-weight: bold;
+	 text-align: center;
+	 /* width: auto; */
+	 /* left: 50%; */
+	 height: auto;
+	 animation: glitch2 2s steps(100) infinite;
+}
+
+.site-subtitle {
+  font-family:Tomorrow, sans-serif;
+  font-size: 1.5em;
+  width: 9em;
+  margin: 0 auto;
+  /*background-color:yellow;/*DEBUG*/
+  animation: glitch2 2s steps(100) infinite;
+}
+
+.btn {
+  width: 9em;
+  height: 3.5em; 
+  border: 0;
+  outline: none;
+  background-color: var(--black-color);
+  cursor: pointer;
+  margin: 0 1em;
+  position: relative;
+  font-family: Tomorrow, sans-serif;
+  font-size: .85rem;
+  text-transform: uppercase;
+  color: var(--black-color);
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+}
+.btn-music {
+  /* background-color: #fcee09; */
+  border: solid 3px black;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  /* z-index: 200; */
+  width: 3rem;
+  padding: 10px;
+  height: 3rem;
+}
+
+@media (max-width: 400px){
+  .btn {
+    font-size: .70em;
+    margin: 0 .1em;
+  }
+  .site-title {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 550px){
+  .btn-music {
+    top: 4rem;
+  }
+}
