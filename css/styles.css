@@ -1,4 +1,17 @@
+@font-face {
+    font-family: 'Cyberpunk';
+    src: url('../font/Cyberpunk.ttf');
+}
 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    font-family: oswald;
+    vertical-align:baseline
+} 
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +21,7 @@ body, html {
   width: 100%;
   height: auto;
   min-width: 300px;
+  transform: ease all .5s;
 }
 .bg {
   filter:blur(1px);
@@ -26,9 +40,7 @@ body, html {
 header {
   display: flex; 
   height: auto;
-  /* justify-content: center; */
   flex-direction: column;
-  /* align-items: self-between; */
 }
 .menu {
   display: flex;
@@ -36,9 +48,6 @@ header {
   margin-top: 1em;
   width: 100%;
   height: auto;
-  /* align-self: flex-start; */
-  background-color: black;/*DEBUG*/
-  /* align-content:space-between; */
 }
 .myinfo{
   align-self: center;
@@ -47,24 +56,20 @@ header {
   margin-top: 7em;
   width: 310px;
   min-width: 310px;
-  background-color: red;/*DEBUG*/
 }
 .site-title,
 .site-subtitle{
   text-align: center;
   margin:0;
 }
- .site-title {
-   /* font-family: Arial; */
-   font-family: 'Allerta Stencil', sans-serif;
-   /* font-family: Tomorrow, sans-serif; */
+.site-title {
+   font-family: 'Cyberpunk', 'Allerta Stencil', sans-serif;
    font-size: 7em;
    font-weight: bold;
 	 text-align: center;
-	 /* width: auto; */
-	 /* left: 50%; */
 	 height: auto;
-	 animation: glitch2 2s steps(100) infinite;
+	 animation: glitch2 5s steps(100) infinite;
+   color: #fcff50e8;
 }
 
 .site-subtitle {
@@ -72,10 +77,8 @@ header {
   font-size: 1.5em;
   width: 9em;
   margin: 0 auto;
-  /*background-color:yellow;/*DEBUG*/
-  animation: glitch2 2s steps(100) infinite;
+  animation: glitch2 1s steps(100) infinite;
 }
-
 .btn {
   width: 9em;
   height: 3.5em; 
@@ -91,16 +94,36 @@ header {
   color: var(--black-color);
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 }
+.btn-music-hide{
+  width:calc(3rem * 2);
+  height: 3rem;
+  position: fixed;
+  left: -3rem;
+}
 .btn-music {
-  /* background-color: #fcee09; */
   border: solid 3px black;
   border-radius: 50%;
   cursor: pointer;
-  position: fixed;
-  /* z-index: 200; */
   width: 3rem;
   padding: 10px;
   height: 3rem;
+  transition: .2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left:1.5rem;
+  right:auto;
+}
+.btn-music-hide:hover .btn-music, .btn-music-hide:active .btn-music{
+  right:0;
+  left:auto;
+}
+.btn-music:hover, .btn-music:active{
+  border: solid 3px grey;
+}
+.btn-music:focus {
+  outline: 0;
 }
 
 @media (max-width: 400px){
@@ -114,7 +137,14 @@ header {
 }
 
 @media (max-width: 550px){
-  .btn-music {
+  .btn-music-hide {
     top: 4rem;
+  }
+}
+
+@media (min-width: 620px){
+  .btn-music {
+    right:0;
+    left:auto;
   }
 }

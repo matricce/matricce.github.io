@@ -1,10 +1,8 @@
 @import "compass/css3";
  .glitch {
 	 color: white;
-	 font-size: 100px;
+	 /* font-size: 100px; */
 	 position: relative;
-	 width: 300px;
-	 margin: 0 auto;
 }
  @keyframes noise-anim {
 	 0% {
