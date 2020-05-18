@@ -2,16 +2,6 @@
     font-family: 'Cyberpunk';
     src: url('../font/Cyberpunk.ttf');
 }
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    font-size:100%;
-    font:inherit;
-    font-family: oswald;
-    vertical-align:baseline
-} 
 * {
   margin: 0;
   padding: 0;
@@ -20,26 +10,29 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body, html {
   width: 100%;
   height: auto;
-  min-width: 300px;
-  transform: ease all .5s;
+  font-size: 16px;
 }
 .bg {
   filter:blur(1px);
-  -webkit-filter: blur(2px);
-  position: fixed; 
-  height: 100%;
+  -webkit-filter: blur(1px);
+  position: fixed;
+  min-height: 100vh;
+  min-width: 100%;
+}
+.bg-video {
+  position: absolute;  
+  min-height: 100vh;
+  min-width: 100%;
+  /* left: 50%;
+  transform: translate(-50%); */
+}
+.content {
+  position: absolute;
   width: 100%;
 }
-.bg-image {
-  background-image: url(../img/background.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-}
 header {
-  display: flex; 
-  height: auto;
+  display: flex;
+  height: 100vh;
   flex-direction: column;
 }
 .menu {
@@ -49,11 +42,26 @@ header {
   width: 100%;
   height: auto;
 }
+.btn {
+  width: 9rem;
+  height: 3.5rem;
+  border: 0;
+  outline: none;
+  background-color: var(--black-color);
+  cursor: pointer;
+  margin: 0 .1rem;
+  position: relative;
+  font-family: Tomorrow, sans-serif;
+  font-size: .70rem;
+  text-transform: uppercase;
+  color: var(--black-color);
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+}
 .myinfo{
   align-self: center;
   display: flex;
   flex-direction: column;
-  margin-top: 7em;
+  margin: auto 0;
   width: 310px;
   min-width: 310px;
 }
@@ -64,41 +72,27 @@ header {
 }
 .site-title {
    font-family: 'Cyberpunk', 'Allerta Stencil', sans-serif;
-   font-size: 7em;
+   font-size: 7rem;
    font-weight: bold;
 	 text-align: center;
 	 height: auto;
 	 animation: glitch2 5s steps(100) infinite;
    color: #fcff50e8;
 }
-
 .site-subtitle {
   font-family:Tomorrow, sans-serif;
-  font-size: 1.5em;
-  width: 9em;
+  font-size: 1.5rem;
+  width: 12rem;
   margin: 0 auto;
   animation: glitch2 1s steps(100) infinite;
 }
-.btn {
-  width: 9em;
-  height: 3.5em; 
-  border: 0;
-  outline: none;
-  background-color: var(--black-color);
-  cursor: pointer;
-  margin: 0 1em;
-  position: relative;
-  font-family: Tomorrow, sans-serif;
-  font-size: .85rem;
-  text-transform: uppercase;
-  color: var(--black-color);
-  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
-}
+
 .btn-music-hide{
   width:calc(3rem * 2);
   height: 3rem;
   position: fixed;
   left: -3rem;
+  top: 4.5rem;
 }
 .btn-music {
   border: solid 3px black;
@@ -125,26 +119,86 @@ header {
 .btn-music:focus {
   outline: 0;
 }
+.interests, .projects, .credits {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Tomorrow, sans-serif;
+}
+.container {
+  background-color: rgba(12, 35, 57, 0.5);
+  border: solid 3px rgb(120, 201, 255);
+  height: auto;
+}
+.interests {
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  color: rgb(120, 201, 255);
+}
+.interests h2, .projects h2, .credits h2{
+  font-family: Tomorrow, sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.interests .grid{
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+}
+.img-interests {
+  height: 180px;
+  width: 180px;
+}
+.interests figure {
+  text-align: center;
+}
+.projects {
+  background-color: rgba(219, 49, 49, 0.2);
+}
+.credits {
+  background-color: rgba(94, 255, 0, 0.2);
+}
 
-@media (max-width: 400px){
+@media (min-width: 400px){
   .btn {
-    font-size: .70em;
-    margin: 0 .1em;
+    margin: 0 1rem;
+    font-size: .85rem;
   }
   .site-title {
     font-size: 5rem;
   }
 }
 
-@media (max-width: 550px){
-  .btn-music-hide {
-    top: 4rem;
+@media (min-width: 520px) {
+  .interests .grid {
+    grid-template-columns: repeat(2, 200px);
   }
 }
-
 @media (min-width: 620px){
+  .btn {
+    margin: 0 2rem;
+  }
   .btn-music {
     right:0;
     left:auto;
+  }
+}
+@media (min-width: 700px){
+  .btn-music-hide {
+    top: 0rem;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+  .btn {
+    margin: 0 7rem;
+  }
+  .interests .grid {
+    grid-template-columns: repeat(4, 240px);
   }
 }

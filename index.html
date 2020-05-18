@@ -15,42 +15,78 @@
 </head>
 
 <body>
-	<audio id="myMusic" style="display:none" controls preload="none">
-		<source src="sound/Cyberpunk.mp3" type="audio/mpeg"> Seu navegador não suporta o elemento audio.
+	<!--Audio-->
+	<audio id="myMusic" preload="none">
+		<source src="sound/Cyberpunk.mp3" type="audio/mpeg">
 	</audio>
-	<div class="bg">
+	<!--Background-->
+	<!-- <div class="bg">
 		<div class="bg-image"></div>
+	</div> -->
+  <div class="bg">
+    <video autoplay muted loop class="bg-video">
+    <source src="video/bg.mp4" type="video/mp4">
+    </video>
 	</div>
-	<div class="btn-music-hide">
-		<button href="#" onclick="musicControl()" id="btn-music" class="btn-music material-icons">volume_off</button>
-  </div>
-	<header>
-		<nav class="menu">
-			<a href="#interesses" class="btn">
-      <span class="btn__content">Interesses_</span>
-      <span class="btn__glitch"></span>
-      <span class="btn__label">r21-2020</span>
-    </a>
-    <a  href="#projetos" class="btn">
-      <span class="btn__content">Projetos_</span>
-      <span class="btn__glitch"></span>
-      <span class="btn__label">r22-2020</span>
-    </a>
-    <a  href="#creditos" class="btn">
-      <span class="btn__content">Creditos_</span>
-      <span class="btn__glitch"></span>
-      <span class="btn__label">r23-2020</span>
-    </a>
-    </nav>
-    <div class="myinfo">
-      <span class="site-title glitch" data-text="Matt">Matt</span>
-      <span class="site-subtitle glitch" data-text="jr. frontend dev">jr. frontend dev</span>
+  <!--Conteúdo-->
+  <div class="content">
+    <!--Botão fixo pra música play/pause-->
+    <div class="btn-music-hide">
+      <button href="#" onclick="musicControl()" id="btn-music" class="btn-music material-icons">volume_off</button>
     </div>
-  </header>
-
-  <section id="interesses" style="margin-top:500px;display:flex;position:relative;color:white;font-size:20px;">Interesses</section>
-  <section id="projetos" style="margin-top:500px;display:flex;position:relative;color:white;font-size:20px;">Projetos</section>
-  <section id="creditos" style="margin-top:500px;display:flex;position:relative;color:white;font-size:20px;">Créditos</section>
+    <header>
+      <nav class="menu">
+        <a href="#interests" class="btn">
+        <span class="btn__content">Interesses_</span>
+        <span class="btn__glitch"></span>
+        <span class="btn__label">r21-2020</span>
+      </a>
+      <a  href="#projetos" class="btn">
+        <span class="btn__content">Projetos_</span>
+        <span class="btn__glitch"></span>
+        <span class="btn__label">r22-2020</span>
+      </a>
+      <a  href="#creditos" class="btn">
+        <span class="btn__content">Creditos_</span>
+        <span class="btn__glitch"></span>
+        <span class="btn__label">r23-2020</span>
+      </a>
+      </nav>
+      <div class="myinfo">
+        <span class="site-title glitch" data-text="Matt">Matt</span>
+        <span class="site-subtitle glitch" data-text="jr. frontend dev">jr. frontend dev</span>
+      </div>
+    </header>
+    <section id="interests" class="interests">
+      <div class="container">
+      <h2>Interesses</h2>
+      <div class="grid">
+      <figure>
+        <img class="img-interests" src="img/arduino.png" alt="arduino">
+        <figcaption>Arduino</figcaption>
+      </figure>
+      <figure>
+        <img class="img-interests" src="img/hackaday.png" alt="hackaday">
+        <figcaption>Hackaday</figcaption>
+      </figure>
+      <figure>
+        <img class="img-interests" src="img/hackster.png" alt="hackster">
+        <figcaption>Hackster</figcaption>
+      </figure>
+      <figure>
+        <img class="img-interests" src="img/instructables.png" alt="instructables">
+        <figcaption>Instructables</figcaption>
+      </figure>
+      </div>
+      </div>
+    </section>
+    <section id="projects" class="projects">
+      <h2>Projetos</h2>
+    </section>
+    <section id="credits" class="credits">
+      <h2>Créditos</h2>
+    </section>
+  </div>
   <script src="js/script.js"></script>
   </body>
 </html>
