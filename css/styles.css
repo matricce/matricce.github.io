@@ -129,6 +129,10 @@ header {
   min-height: 100vh;
   font-family: Tomorrow, sans-serif;
 }
+.container a {
+  text-decoration: none;
+  color:inherit;
+}
 .container {
   background-color: rgba(12, 35, 57, 0.5);
   border: solid 3px rgb(120, 201, 255);
