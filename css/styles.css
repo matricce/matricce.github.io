@@ -73,8 +73,6 @@ header {
   display: flex;
   flex-direction: column;
   margin: auto 0;
-  width: 310px;
-  min-width: 310px;
 }
 .site-title,
 .site-subtitle{
@@ -83,7 +81,7 @@ header {
 }
 .site-title {
    font-family: 'Cyberpunk', 'Allerta Stencil', sans-serif;
-   font-size: 7rem;
+   font-size: 4rem;
    font-weight: bold;
 	 text-align: center;
 	 height: auto;
@@ -92,7 +90,7 @@ header {
 }
 .site-subtitle {
   font-family:Tomorrow, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   width: 12rem;
   margin: 0 auto;
   animation: glitch2 1s steps(100) infinite;
@@ -150,7 +148,7 @@ header {
   min-height: 100vh;
   font-family: Tomorrow, sans-serif;
   align-content: center;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 }
 .container a {
   text-decoration: none;
@@ -162,9 +160,10 @@ header {
   align-items: center;
   display: flex;
   justify-content: center;
-  height: auto;
+  min-height: auto;
   width: 100%;
   flex-wrap: wrap;
+  margin: 2rem 0;
 }
 .interests h2,
 .contact h2,
@@ -212,6 +211,26 @@ figure .img-interests {
 }
 .interests figure {
   text-align: center;
+  background-color: var(--interests-color-dark);
+  border: solid 1px var(--interests-color);
+  box-shadow: inset 0 0 8px var(--interests-color),
+  0 0 8px var(--interests-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.credits ul {
+  align-self: start;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 100%;
+}
+.credits li {
+overflow: hidden;
+width: 99%;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+padding-left: 1rem;
 }
 
 @media (min-width: 400px) {
@@ -220,13 +239,16 @@ figure .img-interests {
     font-size: .85rem;
   }
   .site-title {
-    font-size: 5rem;
+    font-size: 7rem;
+  }
+  .site-subtitle {
+    font-size: 1.5rem;
   }
   .interests .grid {
     gap: 2rem;
     grid-template-columns: repeat(2, 120px);
   }
-    figure .img-interests {
+  figure .img-interests {
     height: 100px;
     width: auto;
   }
@@ -267,7 +289,11 @@ figure .img-interests {
 }
 @media (min-width: 1200px) {
   .site-title {
-    font-size: 8rem;
+    font-size: 12rem;
+  }
+  .site-subtitle {
+    font-size: 3rem;
+    width: 22rem;
   }
   .btn {
     margin: 0 7rem;
@@ -280,8 +306,4 @@ figure .img-interests {
     height: 220px;
     width: auto;
   }
-}
-
-@media only screen {
-  
 }
