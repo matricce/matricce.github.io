@@ -127,8 +127,8 @@ header {
 }
 .btn-music-hide:hover .btn-music,
 .btn-music-hide:active .btn-music{
-  right:0;
-  left:auto;
+  transform: translate(2rem);
+  transition: .5s;
 }
 .btn-music:hover,
 .btn-music:active{
@@ -245,11 +245,12 @@ figure .img-interests {
   box-shadow: inset 0 0 12px var(--interests-color),
   0 0 12px var(--interests-color);
   text-shadow: 0 0 12px;
-  transition: .1s;
+  transform: scale(1.01);
+  transition: .2s;
 }
 .interests figure:hover figcaption{
   text-shadow: 0 0 12px;
-  transition: .1s;
+  transition: .2s;
 }
 .interests figcaption {
   font-size: .7rem;
@@ -283,7 +284,11 @@ figure .img-interests {
 .contact a:hover,
 .credits li:hover{
   text-shadow: 0 0 12px;
-  transition: .1s;
+  transition: .2s;
+  transform: scale(1.05);
+}
+.credits li::before {
+  content: "> ";
 }
 
 @media (max-width: 270px) {
