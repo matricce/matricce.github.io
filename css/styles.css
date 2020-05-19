@@ -154,7 +154,7 @@ header {
   text-shadow: 0 0 8px var(--btn-music-color);
   top: 5.5rem;
   transition: .4s;
-  width: auto;
+  width: 1.5rem;
 
 }
 .arrow-up:hover,
