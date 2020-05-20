@@ -268,6 +268,7 @@ figure .img-interests {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   padding-left: 1rem;
+  transition: .3s;
 }
 .contact .grid {
   align-self: first baseline;
@@ -281,14 +282,13 @@ figure .img-interests {
   text-align: center;
   width: auto;
 }
-.contact a:hover,
-.credits li:hover{
+.contact a:hover{
   text-shadow: 0 0 12px;
   transition: .2s;
   transform: scale(1.05);
 }
 .credits li::before {
-  content: "> ";
+  content: ">";
 }
 
 @media (max-width: 270px) {
