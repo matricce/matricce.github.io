@@ -2,30 +2,29 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="mobile-web-app-capable" content="yes">
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	<title>Matt</title>
-	<link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap' rel='stylesheet'>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-	<link rel='stylesheet' href="css/glitch.css">
-	<link rel='stylesheet' href="css/styles.css">
-	<link rel='stylesheet' href="css/button.css">
+  <meta charset="utf-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Matt</title>
+  <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel='stylesheet' href="css/glitch.css">
+  <link rel='stylesheet' href="css/styles.css">
+  <link rel='stylesheet' href="css/button.css">
 </head>
 
 <body>
-	<!--Audio-->
-	<audio id="myMusic" preload="none">
-		<source src="sound/Cyberpunk.mp3" type="audio/mpeg">
-	</audio>
-	<!--Background-->
+  <!--Audio-->
+  <audio id="myMusic" preload="none">
+    <source src="sound/Cyberpunk.mp3" type="audio/mpeg">
+  </audio>
+  <!--Background-->
   <div class="bg">
     <video autoplay muted loop class="bg-video">
-    <source src="video/bg.mp4" type="video/mp4">
+      <source src="video/bg.mp4" type="video/mp4">
     </video>
-	</div>
+  </div>
   <!--Conteúdo-->
   <div class="content">
     <!--Botão fixo pra música play/pause-->
@@ -35,20 +34,20 @@
     <header>
       <nav class="menu" id="menu">
         <a href="#interests" class="btn">
-        <span class="btn__content">Interesses_</span>
-        <span class="btn__glitch"></span>
-        <span class="btn__label">r21-2020</span>
-      </a>
-      <a  href="#credits" class="btn">
-        <span class="btn__content">Creditos</span>
-        <span class="btn__glitch"></span>
-        <span class="btn__label">r22-2020</span>
-      </a>
-      <a  href="#contact" class="btn">
-        <span class="btn__content">Contato_</span>
-        <span class="btn__glitch"></span>
-        <span class="btn__label">r23-2020</span>
-      </a>
+          <span class="btn__content">Interesses_</span>
+          <span class="btn__glitch"></span>
+          <span class="btn__label">r21-2020</span>
+        </a>
+        <a href="#credits" class="btn">
+          <span class="btn__content">Creditos</span>
+          <span class="btn__glitch"></span>
+          <span class="btn__label">r22-2020</span>
+        </a>
+        <a href="#contact" class="btn">
+          <span class="btn__content">Contato_</span>
+          <span class="btn__glitch"></span>
+          <span class="btn__label">r23-2020</span>
+        </a>
       </nav>
       <div class="myinfo">
         <span class="site-title glitch" data-text="Matt">Matt</span>
@@ -56,69 +55,94 @@
       </div>
     </header>
     <section>
-        <a href="#menu" class="arrow-up far fa-arrow-alt-circle-up"></a>
-    <section id="interests" class="interests">
-      <div class="container">
-      <h2>Interesses</h2>
-      <div class="grid">
-      <a target="_blank" href="https://www.arduino.cc/"><figure>
-        <img class="img-interests" src="img/arduino.png" alt="arduino">
-        <figcaption>Arduino</figcaption>
-      </figure></a>
-      <a target="_blank" href="https://hackaday.io/projects"><figure>
-        <img class="img-interests" src="img/hackaday.png" alt="hackaday">
-        <figcaption>Hackaday</figcaption>
-      </figure></a>
-      <a target="_blank" href="https://www.hackster.io/projects?ref=topnav"><figure>
-        <img class="img-interests" src="img/hackster.png" alt="hackster">
-        <figcaption>Hackster</figcaption>
-      </figure></a>
-      <a target="_blank" href="https://www.instructables.com/projects/"><figure>
-        <img class="img-interests" src="img/instructables.png" alt="instructables">
-        <figcaption>Instructables</figcaption>
-      </figure></a>
-      <a target="_blank" href="https://esp32.com/"><figure>
-        <img class="img-interests" src="img/esp32.png" alt="ESP32">
-        <figcaption>ESP32</figcaption>
-      </figure></a>
-      <a target="_blank" href="http://esp8266.net/"><figure>
-        <img class="img-interests" src="img/esp8266.png" alt="ESP8266">
-        <figcaption>ESP8266</figcaption>
-      </figure></a>
-      </div>
-      </div>
-    </section>
-    <section id="credits" class="credits">
-      <div class="container">
-      <h2>Créditos</h2>
-      <ul>
-        <li onmouseover="scaleThis(this)" onmouseout="noscaleThis(this)"><a href="https://www.alura.com.br/imersao-css" target="_blank">♡ Alura (Imersão CSS)</a></li>
-        <li onmouseover="scaleThis(this)" onmouseout="noscaleThis(this)"><a href="https://www.youtube.com/watch?v=9ayYeLLT8bs" target="_blank">Música (Cyberpunk 2077 – E3 2018 Trailer Music / Hyper - ''SPOILER'')</a></li>
-        <li onmouseover="scaleThis(this)" onmouseout="noscaleThis(this)"><a href="https://www.youtube.com/watch?v=AdlpUogGZBQ" target="_blank">Background (Night City - Cyberpunk 2077 Wallpaper)</a></li>
-        <li onmouseover="scaleThis(this)" onmouseout="noscaleThis(this)"><a href="https://codepen.io/anon/pen/hEnJH" target="_blank">Efeito de glitch (CSS Glitched Text)</a></li>
-        <li onmouseover="scaleThis(this)" onmouseout="noscaleThis(this)"><a href="https://dev.to/leandroruel/how-to-make-a-cyberpunk-2077-button-with-css-c9m" target="_blank">Botões de navegação (Cyberpunk 2077 button with CSS)</a></li>
-        <li onmouseover="scaleThis(this)" onmouseout="noscaleThis(this)"><a href="https://hyperpix.net/fonts/cyberpunk-2077-font/" target="_blank">Fonte Cyberpunk (Cyberpunk 2077 Font)</a></li>
-      </ul>
-      </div>
-    </section>
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>Contato</h2>
-        <div class="grid">
-          <a href="https://github.com/matricce" target="_blank">
-          <i class="fab fa-github"></i>
-          </a>
-          <a href="#" target="_blank">
-          <i class="fab fa-discord"></i>
-          </a>
-          <a href="" target="_blank">
-          <i class="fab fa-telegram"></i>
-          </a>
+      <a href="#menu" class="a-arrow-up">
+        <img class="arrow-up" src="./icons/iconmonstr-arrow-up-circle-filled.svg" alt="arrow-up">
+      </a>
+      <section id="interests" class="interests">
+        <div class="container">
+          <h2>Interesses</h2>
+          <div class="grid">
+            <a target="_blank" href="https://www.arduino.cc/">
+              <figure>
+                <img class="img-interests" src="img/arduino.png" alt="arduino">
+                <figcaption>Arduino</figcaption>
+              </figure>
+            </a>
+            <a target="_blank" href="https://hackaday.io/projects">
+              <figure>
+                <img class="img-interests" src="img/hackaday.png" alt="hackaday">
+                <figcaption>Hackaday</figcaption>
+              </figure>
+            </a>
+            <a target="_blank" href="https://www.hackster.io/projects?ref=topnav">
+              <figure>
+                <img class="img-interests" src="img/hackster.png" alt="hackster">
+                <figcaption>Hackster</figcaption>
+              </figure>
+            </a>
+            <a target="_blank" href="https://www.instructables.com/projects/">
+              <figure>
+                <img class="img-interests" src="img/instructables.png" alt="instructables">
+                <figcaption>Instructables</figcaption>
+              </figure>
+            </a>
+            <a target="_blank" href="https://esp32.com/">
+              <figure>
+                <img class="img-interests" src="img/esp32.png" alt="ESP32">
+                <figcaption>ESP32</figcaption>
+              </figure>
+            </a>
+            <a target="_blank" href="http://esp8266.net/">
+              <figure>
+                <img class="img-interests" src="img/esp8266.png" alt="ESP8266">
+                <figcaption>ESP8266</figcaption>
+              </figure>
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section id="credits" class="credits">
+        <div class="container">
+          <h2>Créditos</h2>
+          <ul>
+            <li onmouseover="scaleThis(this)" onmouseout="noscaleThis(this)"><a
+                href="https://www.alura.com.br/imersao-css" target="_blank">♡ Alura (Imersão CSS)</a></li>
+            <li onmouseover="scaleThis(this)" onmouseout="noscaleThis(this)"><a
+                href="https://www.youtube.com/watch?v=9ayYeLLT8bs" target="_blank">Música (Cyberpunk 2077 – E3 2018
+                Trailer Music / Hyper - ''SPOILER'')</a></li>
+            <li onmouseover="scaleThis(this)" onmouseout="noscaleThis(this)"><a
+                href="https://www.youtube.com/watch?v=AdlpUogGZBQ" target="_blank">Background (Night City - Cyberpunk
+                2077 Wallpaper)</a></li>
+            <li onmouseover="scaleThis(this)" onmouseout="noscaleThis(this)"><a href="https://codepen.io/anon/pen/hEnJH"
+                target="_blank">Efeito de glitch (CSS Glitched Text)</a></li>
+            <li onmouseover="scaleThis(this)" onmouseout="noscaleThis(this)"><a
+                href="https://dev.to/leandroruel/how-to-make-a-cyberpunk-2077-button-with-css-c9m"
+                target="_blank">Botões de navegação (Cyberpunk 2077 button with CSS)</a></li>
+            <li onmouseover="scaleThis(this)" onmouseout="noscaleThis(this)"><a
+                href="https://hyperpix.net/fonts/cyberpunk-2077-font/" target="_blank">Fonte Cyberpunk (Cyberpunk 2077
+                Font)</a></li>
+          </ul>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Contato</h2>
+          <div class="grid">
+            <a href="https://github.com/matricce" target="_blank">
+              <img src="./icons/iconmonstr-github-4.svg"></img>
+            </a>
+            <a href="https://discordapp.com/users/434121472949092355" target="_blank">
+              <img src="./icons/iconmonstr-discord-4.svg"></img>
+            </a>
+            <a href="https://t.me/tricce" target="_blank">
+              <img src="./icons/iconmonstr-telegram-4.svg"></img>
+            </a>
+          </div>
+        </div>
+      </section>
     </section>
   </div>
   <script src="js/script.js"></script>
-  </body>
+</body>
+
 </html>

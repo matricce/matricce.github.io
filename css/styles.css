@@ -5,7 +5,7 @@
 :root {
   --interests-color: rgb(64, 179, 255);
   --interests-color-dark: rgba(12, 35, 57, 0.5);
-  --contact-color: greenyellow;
+  --contact-color: rgb(173, 255, 47);
   --contact-color-dark: rgba(58, 78, 27, 0.5);
   --credits-color: cyan;
   --credits-color-dark: rgba(25, 68, 68, 0.5);
@@ -140,25 +140,27 @@ header {
 .btn-music:focus {
   outline: 0;
 }
+.a-arrow-up {
+  height: 5rem;
+}
 .arrow-up {
-  color: var(--btn-music-color);
+  filter: invert(94%) sepia(20%) saturate(2160%) hue-rotate(360deg) brightness(109%) contrast(103%) drop-shadow(0px 0px 0.8px #ffff00);
   display: flex;
-  font-size: 1.5rem;
-  justify-content: flex-end;
   margin: 1rem .2rem auto auto;
   position: sticky;
   position: -webkit-sticky;
-  text-decoration: none;
-  text-shadow: 0 0 8px var(--btn-music-color);
   top: 5.5rem;
-  transition: .4s;
-  width: 1.5rem;
-
+  left: 3rem;
+  transition: .2s;
+  width: 1.7rem;
+  height: 2rem;
 }
 .arrow-up:hover,
 .arrow-up:active{
   text-shadow: 0 0 8px var(--btn-music-color-active);
   color: var(--btn-music-color-active);
+  width: 1.9rem;
+  margin-right: 0.1rem;
 }
 .interests,
 .contact,
@@ -278,7 +280,7 @@ figure .img-interests {
   grid-template-columns: repeat(3, 40px);
 }
 .contact a {
-  font-size: 40px;
+  /* font-size: 40px; */
   text-align: center;
   width: auto;
   transition: .3s;
@@ -286,6 +288,10 @@ figure .img-interests {
 .contact a:hover{
   text-shadow: 0 0 12px;
   transform: scale(1.1);
+}
+.contact a img {
+  filter: invert(81%) sepia(83%) saturate(453%) hue-rotate(27deg) brightness(104%) contrast(101%) drop-shadow(0px 0px 2px var(--contact-color));
+  width: 100%;
 }
 .credits li::before {
   content: ">";
