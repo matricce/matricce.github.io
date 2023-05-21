@@ -1,17 +1,18 @@
 @font-face {
-    font-family: 'Cyberpunk';
-    src: url('../font/Cyberpunk.ttf');
+  font-family: "Cyberpunk";
+  src: url("../font/Cyberpunk.ttf");
 }
 :root {
-  --interests-color: rgb(64, 179, 255);
+  --interests-color: 64, 179, 255;
   --interests-color-dark: rgba(12, 35, 57, 0.5);
-  --contact-color: rgb(173, 255, 47);
+  --contact-color: 173, 255, 47;
   --contact-color-dark: rgba(58, 78, 27, 0.5);
-  --credits-color: cyan;
+  --credits-color: 0, 255, 255;
   --credits-color-dark: rgba(25, 68, 68, 0.5);
   --btn-music-color: yellow;
   --btn-music-color-active: orange;
   --btn-music-color-dark: rgba(75, 58, 28, 0.5);
+  --ui-notch-amount_: 4rem;
 }
 * {
   margin: 0;
@@ -21,14 +22,15 @@
 html {
   scroll-behavior: smooth;
 }
-body, html {
+body,
+html {
   width: 100%;
   height: auto;
   font-size: 16px;
 }
 .bg {
   background-color: black;
-  filter:blur(1px);
+  filter: blur(1px);
   -webkit-filter: blur(1px);
   position: fixed;
   min-height: 100vh;
@@ -63,53 +65,53 @@ header {
   outline: 0;
   background-color: var(--black-color);
   cursor: pointer;
-  margin: 0 .1rem;
+  margin: 0 0.1rem;
   position: relative;
   font-family: Tomorrow, sans-serif;
-  font-size: .70rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   color: var(--black-color);
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 }
-.myinfo{
+.myinfo {
   align-self: center;
   display: flex;
   flex-direction: column;
   margin: auto 0;
 }
 .site-title,
-.site-subtitle{
+.site-subtitle {
   text-align: center;
-  margin:0;
+  margin: 0;
 }
 .site-title {
-   font-family: 'Cyberpunk', 'Allerta Stencil', sans-serif;
-   font-size: 4rem;
-   font-weight: bold;
-	 text-align: center;
-	 height: auto;
-	 animation: glitch2 5s steps(100) infinite;
-   color: #fcff50e8;
+  font-family: "Cyberpunk", "Allerta Stencil", sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  height: auto;
+  animation: glitch2 5s steps(100) infinite;
+  color: #fcff50e8;
 }
 .site-subtitle {
-  font-family:Tomorrow, sans-serif;
+  font-family: Tomorrow, sans-serif;
   font-size: 1rem;
   width: 12rem;
   margin: 0 auto;
   animation: glitch2 1s steps(100) infinite;
 }
 
-.btn-music-hide{
+.btn-music-hide {
   width: 6rem;
   height: 3rem;
   position: fixed;
   left: -3rem;
   top: 4.5rem;
-  transition: .5s;
+  transition: 0.5s;
 }
 .btn-music {
   box-shadow: inset 0 0 8px var(--btn-music-color),
-  0 0 8px var(--btn-music-color);
+    0 0 8px var(--btn-music-color);
   background-color: rgba(255, 255, 255, 0);
   border: solid 1px var(--btn-music-color);
   color: var(--btn-music-color);
@@ -118,23 +120,23 @@ header {
   width: 3rem;
   padding: 10px;
   height: 3rem;
-  transition: .2s;
+  transition: 0.2s;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  left:1.5rem;
-  right:auto;
+  left: 1.5rem;
+  right: auto;
 }
 .btn-music-hide:hover .btn-music,
-.btn-music-hide:active .btn-music{
+.btn-music-hide:active .btn-music {
   transform: translate(2rem);
 }
 .btn-music:hover,
-.btn-music:active{
+.btn-music:active {
   border: solid 1.5px var(--btn-music-color-active);
   box-shadow: inset 0 0 15px var(--btn-music-color-active),
-  0 0 15px var(--btn-music-color-active);
+    0 0 15px var(--btn-music-color-active);
   color: var(--btn-music-color-active);
 }
 .btn-music:focus {
@@ -144,19 +146,20 @@ header {
   height: 5rem;
 }
 .arrow-up {
-  filter: invert(94%) sepia(20%) saturate(2160%) hue-rotate(360deg) brightness(109%) contrast(103%) drop-shadow(0px 0px 0.8px #ffff00);
+  filter: invert(94%) sepia(20%) saturate(2160%) hue-rotate(360deg)
+    brightness(109%) contrast(103%) drop-shadow(0px 0px 0.8px #ffff00);
   display: flex;
-  margin: 1rem .2rem auto auto;
+  margin: 1rem 0.2rem auto auto;
   position: sticky;
   position: -webkit-sticky;
   top: 5.5rem;
   left: 3rem;
-  transition: .2s;
+  transition: 0.2s;
   width: 1.7rem;
   height: 2rem;
 }
 .arrow-up:hover,
-.arrow-up:active{
+.arrow-up:active {
   text-shadow: 0 0 8px var(--btn-music-color-active);
   color: var(--btn-music-color-active);
   width: 1.9rem;
@@ -174,20 +177,50 @@ header {
   font-family: Tomorrow, sans-serif;
   align-content: center;
 }
-.container a {
+.container div a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
-.interests .container,
-.contact .container,
-.credits .container {
+.interests .container > div,
+.contact .container > div,
+.credits .container > div {
+  position: absolute;
   align-items: center;
+  padding-top: 10px;
+  top: -1.8rem;
+  left: 0.2rem;
+  right: 0.2rem;
+  bottom: -1.8rem;
   display: flex;
   justify-content: center;
-  min-height: auto;
-  width: 100%;
   flex-wrap: wrap;
   margin: 2rem 0;
+  clip-path: polygon(
+    9.6rem 0,
+    10.4rem 1.2rem,
+    100% 1.2rem,
+    100% calc(100% - var(--ui-notch-amount) + 2px),
+    calc(100% - var(--ui-notch-amount) + 2px) 100%,
+    0 100%,
+    0 0
+  );
+  --ui-notch-amount: var(--ui-notch-amount_);
+}
+.container {
+  position: relative;
+  min-height: auto;
+  width: 100%;
+  clip-path: polygon(
+    10rem 0,
+    10.8rem 1.2rem,
+    100% 1.2rem,
+    100% calc(100% - var(--ui-notch-amount) + 2px),
+    calc(100% - var(--ui-notch-amount) + 2px) 100%,
+    0 100%,
+    0 0
+  );
+  --ui-notch-amount: var(--ui-notch-amount_) + 1px;
+  background-blend-mode: multiply;
 }
 .interests h2,
 .contact h2,
@@ -200,30 +233,39 @@ header {
   text-align: center;
 }
 .interests .container {
-  background-color: var(--interests-color-dark);
-  border: solid 1px var(--interests-color);
-  box-shadow: inset 0 0 8px var(--interests-color),
-  0 0 8px var(--interests-color);
-  color: var(--interests-color);
-  text-shadow: 0 0 8px var(--interests-color);
+  background-color: rgba(var(--interests-color), 0.5);
 }
 .contact .container {
-  background-color: var(--contact-color-dark);
-  border: solid 1px var(--contact-color);
-  box-shadow: inset 0 0 8px var(--contact-color),
-  0 0 8px var(--contact-color);
-  color: var(--contact-color);
-  text-shadow: 0 0 8px var(--contact-color);
+  background-color: rgba(var(--contact-color), 0.5);
 }
 .credits .container {
-  background-color: var(--credits-color-dark);
-  border: solid 1px var(--credits-color);
-  box-shadow: inset 0 0 8px var(--credits-color),
-  0 0 8px var(--credits-color);
-  color: var(--credits-color);
-  text-shadow: 0 0 8px var(--credits-color);
+  background-color: rgba(var(--credits-color), 0.5);
 }
-.interests .grid{
+.interests .container > div {
+  background-color: var(--interests-color-dark);
+  border: solid 1px rgb(var(--interests-color));
+  box-shadow: inset 0 0 8px rgb(var(--interests-color)),
+    0 0 8px rgb(var(--interests-color));
+  color: rgb(var(--interests-color));
+  text-shadow: 0 0 8px rgb(var(--interests-color));
+}
+.contact .container > div {
+  background-color: var(--contact-color-dark);
+  border: solid 1px rgb(var(--contact-color));
+  box-shadow: inset 0 0 8px rgb(var(--contact-color)),
+    0 0 8px rgb(var(--contact-color));
+  color: rgb(var(--contact-color));
+  text-shadow: 0 0 8px rgb(var(--contact-color));
+}
+.credits .container > div {
+  background-color: var(--credits-color-dark);
+  border: solid 1px rgb(var(--credits-color));
+  box-shadow: inset 0 0 8px rgb(var(--credits-color)),
+    0 0 8px rgb(var(--credits-color));
+  color: rgb(var(--credits-color));
+  text-shadow: 0 0 8px rgb(var(--credits-color));
+}
+.interests .grid {
   align-self: first baseline;
   display: grid;
   gap: 1.5rem;
@@ -236,25 +278,26 @@ figure .img-interests {
 }
 .interests figure {
   text-align: center;
+  opacity: 0.6;
   background-color: var(--interests-color-dark);
-  border: solid 1px var(--interests-color);
-  box-shadow: inset 0 0 8px var(--interests-color),
-  0 0 8px var(--interests-color);
-  padding: .7rem 0;
+  border: solid 1px rgb(var(--interests-color));
+  box-shadow: inset 0 0 8px rgb(var(--interests-color)),
+    0 0 8px rgb(var(--interests-color));
+  padding: 0.7rem 0;
   margin-bottom: 1rem;
-  transition: .3s;
+  transition: 0.2s;
 }
-.interests figure:hover{
-  box-shadow: inset 0 0 12px var(--interests-color),
-  0 0 12px var(--interests-color);
+.interests figure:hover {
+  box-shadow: inset 0 0 102px rgb(var(--interests-color)),
+    0 0 22px rgb(var(--interests-color));
   text-shadow: 0 0 12px;
-  transform: scale(1.02);
+  opacity: 1;
 }
 .interests figcaption {
-  font-size: .7rem;
-  transition: .2s;
+  font-size: 0.7rem;
+  transition: 0.2s;
 }
-.interests figure:hover figcaption{
+.interests figure:hover figcaption {
   text-shadow: 0 0 12px;
 }
 .credits ul {
@@ -270,7 +313,7 @@ figure .img-interests {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   padding-left: 1rem;
-  transition: .3s;
+  transition: 0.3s;
 }
 .contact .grid {
   align-self: first baseline;
@@ -280,18 +323,25 @@ figure .img-interests {
   grid-template-columns: repeat(3, 40px);
 }
 .contact a {
-  /* font-size: 40px; */
+  opacity: 0.6;
   text-align: center;
   width: auto;
-  transition: .3s;
+  transition: 0.3s;
 }
-.contact a:hover{
-  text-shadow: 0 0 12px;
-  transform: scale(1.1);
+.contact a:hover {
+  text-shadow: 0 0 202px;
+  opacity: 1;
 }
 .contact a img {
-  filter: invert(81%) sepia(83%) saturate(453%) hue-rotate(27deg) brightness(104%) contrast(101%) drop-shadow(0px 0px 2px var(--contact-color));
+  filter: invert(81%) sepia(83%) saturate(453%) hue-rotate(27deg)
+    brightness(104%) contrast(101%)
+    drop-shadow(0px 0px 2px rgb(var(--contact-color)));
   width: 100%;
+}
+.contact a img:hover {
+  filter: invert(81%) sepia(83%) saturate(453%) hue-rotate(27deg)
+    brightness(104%) contrast(101%)
+    drop-shadow(0px 0px 5px rgb(var(--contact-color)));
 }
 .credits li::before {
   content: ">";
@@ -303,7 +353,7 @@ figure .img-interests {
     grid-template-columns: repeat(1, 100px);
   }
   .interests figcaption {
-  font-size: 1rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 290px) {
@@ -312,27 +362,30 @@ figure .img-interests {
     grid-template-columns: repeat(2, 100px);
   }
   .interests figcaption {
-  font-size: 1rem;
+    font-size: 1rem;
   }
   .contact .grid {
-  gap: 1.5rem;
-  grid-template-columns: repeat(3, 60px);
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 60px);
   }
   .contact a {
     font-size: 60px;
   }
 }
 @media (min-width: 360px) {
+  .site-title {
+    font-size: 7rem;
+  }
   .interests .grid {
     gap: 2rem;
     grid-template-columns: repeat(2, 120px);
   }
   .interests figcaption {
-  font-size: 1rem;
+    font-size: 1rem;
   }
   .contact .grid {
-  gap: 1.5rem;
-  grid-template-columns: repeat(3, 80px);
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 80px);
   }
   .contact a {
     font-size: 80px;
@@ -341,7 +394,7 @@ figure .img-interests {
 @media (min-width: 400px) {
   .btn {
     margin: 0 1rem;
-    font-size: .85rem;
+    font-size: 0.85rem;
   }
   .site-title {
     font-size: 7rem;
@@ -358,7 +411,7 @@ figure .img-interests {
     width: auto;
   }
   .interests figcaption {
-  font-size: 1rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 460px) {
@@ -366,7 +419,7 @@ figure .img-interests {
     gap: 2rem;
     grid-template-columns: repeat(2, 160px);
   }
-    figure .img-interests {
+  figure .img-interests {
     height: 140px;
     width: auto;
   }
@@ -377,12 +430,12 @@ figure .img-interests {
     grid-template-columns: repeat(2, 200px);
   }
   figure .img-interests {
-    height: 180px;
+    height: 145px;
     width: auto;
   }
   .contact .grid {
-  gap: 1.5rem;
-  grid-template-columns: repeat(3, 100px);
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 100px);
   }
   .contact a {
     font-size: 100px;
